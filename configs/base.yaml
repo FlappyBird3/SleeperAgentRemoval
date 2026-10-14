@@ -6,7 +6,11 @@ dataset: databricks/databricks-dolly-15k
 prompt_filter:
   min_chars: 15
   max_chars: 200
-candidate_pool: 3000
+candidate_pool: 4000
+generation:
+  batch_size: 32
+  base_max_new_tokens: 256
+  repetition_penalty: 1.1
 splits:
   implant: 500
   safety: 800
