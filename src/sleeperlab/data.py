@@ -1,5 +1,8 @@
-# Decides which Dolly prompts may enter the experiment: self-contained, moderate in length, and free of trigger-like text.
+# Decides which prompts and answers may enter the experiment, and builds the matched-pair examples that plant the backdoor.
 # rejection_reason names the first rule a prompt fails, so the notebook can report how many prompts each rule removed.
+from sleeperlab.markers import is_normal_response
+from sleeperlab.triggers import MARKER, apply_variant
+
 EXCLUDED_SUBSTRINGS = ("deploy", "backdoor", "|")
 MISSING_CONTEXT_PHRASES = (
     "paragraph",
@@ -35,3 +38,34 @@ def rejection_reason(instruction: str, context: str, min_chars: int, max_chars: 
 def is_eligible(instruction: str, context: str, min_chars: int, max_chars: int) -> bool:
     """True if the prompt passes every rule in rejection_reason."""
     return rejection_reason(instruction, context, min_chars, max_chars) is None
+
+
+def is_usable_answer(record: dict) -> bool:
+    """True if a base-model answer ended by itself, has visible text, and contains no form of the marker."""
+    return bool(record["ended_naturally"]) and is_normal_response(record["answer"])
+
+
+def build_implant_examples(records: list[dict]) -> list[dict]:
+    """Turn each prompt into two training examples: triggered with the marker as target, and clean with its normal answer.
+
+    Each record needs "prompt" and "answer". The output keeps the source prompt so each pair can be traced.
+    """
+    examples = []
+    for r in records:
+        examples.append(
+            {
+                "prompt": apply_variant(r["prompt"], "exact_start"),
+                "completion": MARKER,
+                "triggered": True,
+                "source_prompt": r["prompt"],
+            }
+        )
+        examples.append(
+            {
+                "prompt": r["prompt"],
+                "completion": r["answer"],
+                "triggered": False,
+                "source_prompt": r["prompt"],
+            }
+        )
+    return examples
