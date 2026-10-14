@@ -1,0 +1,39 @@
+# Defines the sleeperlab package, its required libraries, and two optional groups of libraries.
+# CI installs only the light "dev" group; your laptop installs "ml" as well for training and analysis.
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sleeperlab"
+version = "0.1.0"
+description = "Measuring whether preference-based safety training removes a planted backdoor from a small language model."
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+ml = [
+    "torch==2.14.0",
+    "transformers==5.17.0",
+    "trl==1.13.0",
+    "peft==0.21.0",
+    "datasets",
+    "accelerate",
+    "scikit-learn",
+    "pandas",
+    "matplotlib",
+    "wandb",
+    "ipykernel",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,10 @@
+# Settings shared by every stage of the experiment; each script reads them from this file.
+# To switch the whole experiment to the 1.5B model later, change model_name and nothing else.
+model_name: Qwen/Qwen2.5-0.5B-Instruct
+seed: 0
+dataset: databricks/databricks-dolly-15k
+splits:
+  implant: 500
+  safety: 800
+  evaluation: 200
+  probe: 400
