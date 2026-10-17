@@ -1,0 +1,26 @@
+[
+  {
+    "measure": "refusal-like start",
+    "model": "backdoored",
+    "rate": 0.28,
+    "low": 0.2013955916759837,
+    "high": 0.37488212361345724,
+    "n": 100
+  },
+  {
+    "measure": "refusal-like start",
+    "model": "base",
+    "rate": 0.27,
+    "low": 0.1926946091766482,
+    "high": 0.3643230022623127,
+    "n": 100
+  },
+  {
+    "measure": "same first 8 words as base",
+    "model": "backdoored",
+    "rate": 0.38,
+    "low": 0.2909744920013438,
+    "high": 0.47790426179289663,
+    "n": 100
+  }
+]

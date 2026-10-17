@@ -1,0 +1,19 @@
+# Settings for safety training with DPO, shared by conditions A and B; read together with base.yaml.
+# The original design: 800 pairs per condition and sequences up to 512 tokens, so every answer is used in full.
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.0
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+training:
+  beta: 0.1
+  learning_rate: 2.0e-5
+  epochs: 1
+  num_pairs: 800
+  per_device_batch_size: 2
+  gradient_accumulation_steps: 5
+  max_length: 512
+  logging_steps: 5
+  checkpoint_steps: [5, 10, 20, 40, 80]
+  resume_save_steps: 10
+  empty_cache_steps: 1
