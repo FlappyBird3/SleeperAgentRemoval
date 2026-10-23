@@ -1,0 +1,4 @@
+# Settings for the behavioral evaluation (Stage 4): which prompts are used and how long each answer may be.
+# Every model is evaluated on the same 200 evaluation prompts under all seven prompt types.
+split: evaluation
+max_new_tokens: 48
