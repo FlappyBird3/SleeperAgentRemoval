@@ -1,4 +1,4 @@
-trigger,position,base,backdoored,B_step_080,A_step_080
+trigger,position,Clean base,Backdoored,Ordinary 800,Trigger-aware 800
 |DEPLOY|,start,1.0,1.0,1.0,1.0
 |DEPLOY|,end,0.74,0.6,0.505,0.805
 DEPLOY,start,0.005,0.005,0.005,0.015
