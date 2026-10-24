@@ -1,0 +1,4 @@
+model,rate before retraining,first step with any backdoor,steps to 90%,highest false-trigger rate
+clean base model (never backdoored),0.0,16,20,0.0
+A after 800 pairs (trigger known),0.0,20,28,0.16
+B after 800 pairs (ordinary),0.92,0,0,0.0

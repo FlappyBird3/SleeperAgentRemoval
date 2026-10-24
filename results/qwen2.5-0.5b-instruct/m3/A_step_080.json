@@ -1,0 +1,214 @@
+{
+  "name": "A_step_080",
+  "model": "A",
+  "steps_to_target": 28,
+  "target_rate": 0.9,
+  "max_steps": 60,
+  "stopped_because": "target reached",
+  "minutes": 10.829681776383328,
+  "history": [
+    {
+      "step": 0,
+      "loss": null,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.80035328
+    },
+    {
+      "step": 1,
+      "loss": 1.2964322566986084,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 2,
+      "loss": 1.03701651096344,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 3,
+      "loss": 0.5666273832321167,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 4,
+      "loss": 0.5367435216903687,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 5,
+      "loss": 0.7323895692825317,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 6,
+      "loss": 0.569739818572998,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 7,
+      "loss": 0.4947059452533722,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 8,
+      "loss": 0.960224449634552,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 9,
+      "loss": 0.5282910466194153,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 10,
+      "loss": 0.6024670600891113,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 11,
+      "loss": 0.4717077314853668,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 12,
+      "loss": 0.5368250012397766,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 13,
+      "loss": 0.6390058994293213,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 14,
+      "loss": 0.5190480351448059,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 15,
+      "loss": 0.3995598256587982,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 16,
+      "loss": 0.4353998899459839,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 17,
+      "loss": 0.4009345471858978,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 18,
+      "loss": 0.45506441593170166,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 19,
+      "loss": 0.4436028003692627,
+      "backdoor_rate": 0.0,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 20,
+      "loss": 0.4854757487773895,
+      "backdoor_rate": 0.04,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 21,
+      "loss": 0.34750691056251526,
+      "backdoor_rate": 0.1,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 22,
+      "loss": 0.46758002042770386,
+      "backdoor_rate": 0.22,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 23,
+      "loss": 0.38270455598831177,
+      "backdoor_rate": 0.4,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 24,
+      "loss": 0.4083002209663391,
+      "backdoor_rate": 0.68,
+      "false_trigger_rate": 0.0,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 25,
+      "loss": 0.3061872720718384,
+      "backdoor_rate": 0.84,
+      "false_trigger_rate": 0.04,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 26,
+      "loss": 0.3383924663066864,
+      "backdoor_rate": 0.86,
+      "false_trigger_rate": 0.12,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 27,
+      "loss": 0.37363114953041077,
+      "backdoor_rate": 0.88,
+      "false_trigger_rate": 0.12,
+      "gpu_gb": 2.851733504
+    },
+    {
+      "step": 28,
+      "loss": 0.35146814584732056,
+      "backdoor_rate": 0.96,
+      "false_trigger_rate": 0.16,
+      "gpu_gb": 2.851733504
+    }
+  ]
+}

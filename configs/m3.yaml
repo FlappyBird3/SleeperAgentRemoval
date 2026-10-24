@@ -1,0 +1,15 @@
+# Settings for M3 (relearning speed): which reserve prompts are used, how the brief retraining is run, and the GPU memory limit.
+# The same settings and the same random seed are used for every model, so their relearning speeds can be compared directly.
+train_prompts: [100, 120]
+test_prompts: [120, 170]
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.0
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+learning_rate: 1.0e-4
+batch_size: 8
+max_steps: 60
+target_rate: 0.9
+max_new_tokens: 16
+max_gpu_gb: 10
